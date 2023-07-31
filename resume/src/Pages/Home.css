@@ -1,0 +1,43 @@
+.center{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.banner {
+    background-color: aqua;
+}
+
+.banner-body {
+    padding: 5em 5em;
+    margin: 10em 100vw;
+}
+
+.welcome-title {
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.welcome-body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: small;
+}
+
+.about-me {
+    background-color: cornflowerblue;
+}
+
+.am-banner-body {
+    padding: 5em 0;
+    margin: 0 100vw;
+    width: 50em;
+}
+
+.am-title {
+    font-size: large;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.am-body {
+    font-size: small;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
