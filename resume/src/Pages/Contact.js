@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import Layout from '../Layouts/Layout.js'
-import './Contact.css';
+import './style/Contact.css';
 
 function Contact() {
     const [subject, setSubject] = useState(null)

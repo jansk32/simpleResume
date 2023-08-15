@@ -4,16 +4,31 @@ const app = express();
 
 const port = process.env.port || 3000;
 
-app.get('/', (req, res, next) => {
-  
+function storeDetails(body) {
+
+    // get details of sending email
+
+    // store details in db
+
+    // send email confirmation request
+
+    // notify me of sent request
+
+}
+
+app.post('/email/inquiry', (req, res, next) => {
+    console.log(req.body);
+
+    storeDetails(req.body);
+
+    // send request to requestor
 })
 
-app.get('/about', (req, res, next) => {
+app.post('/email/resume', (req, res, next) => {
+    storeDetails(req.body);
 
-})
-
-app.get('/contact', (req, res, next) => {
-
+    // send cv attachment to requestor
+    
 })
 
 app.listen(port);
