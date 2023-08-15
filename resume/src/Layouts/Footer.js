@@ -5,8 +5,10 @@ export default function Footer() {
       <div style={{
         'backgroundColor' : 'black',
         'color' : 'white',
-        'margin-top': '5vh',
         'padding-top': '3vh',
+        'padding-left': '40vw',
+        'bottom': '0px',
+        'width': '100%',
         'height': '15vh'}}>
           <p>© 2023 Jansen, All Rights Reserved</p>
       </div>

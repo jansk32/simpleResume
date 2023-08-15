@@ -3,11 +3,11 @@ import React from 'react';
 export default function Header() {
   return (
     <div className="header">
-        <div className="logo">J</div>
+        <div className="logo"><a href='/'>J</a></div>
         <div></div>
         <div className="menu">
-          <p className="menu-button">Portfolio</p>
-          <p className="menu-button">Get in Touch</p>
+          <a className="menu-button" href='/portfolio'>Portfolio</a>
+          <a className="menu-button" href='/contact'>Get in Touch</a>
           <p></p>
         </div>
     </div>
