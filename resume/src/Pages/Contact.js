@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Layout from '../Layouts/Layout.js'
+import Popup from '../Popup/popup.js';
+import axios from 'axios';
 import './style/Contact.css';
 
 function Contact() {
@@ -9,28 +11,51 @@ function Contact() {
     const [company, setCompany] = useState('');
     const [email, setEmail] = useState('');
     const [inquiry, setInquiry] = useState('');
-    const [inquiryRequired, setInquiryRequired] = useState(true);
+    const [open, setOpen] = useState(false);
+    const [statusMsg, setStatusMsg] = useState("Hello there!")
 
     const options = [
         { value: null, label: 'Choose a subject' },
         { value: 1, label: 'Job Opportunity' },
         { value: 2, label: 'Collaboration Opportunity' },
-        { value: 3, label: 'Request a Resume' },
     ]
 
     function onChangeSetSubject(val){
         setSubject(val);
-        if(val === 3){
-            setInquiryRequired(true);
-        }else {
-            setInquiryRequired(false);
-        }
+    }
+
+    function sendData(e){
+        e.preventDefault();
+        
+        axios.post(process.env.REACT_APP_HOST_URL + "email/inquiry", {
+            firstName: firstName,
+            lastName: lastName,
+            email: email,
+            company: company,
+            type: subject,
+            body: inquiry,
+        })
+        .then((resp) => {
+            console.log("success")
+            setOpen(true);
+            setStatusMsg("Your inquiry was successfully sent!")
+
+        })
+        .catch((err) => {
+            console.log("error");
+            setOpen(true);
+            setStatusMsg("Oops! Seems like an error :( Please send a direct email to jankwo32@gmail.com instead")
+
+        })
     }
 
 
     return (
-    <Layout>
     <div className="center">
+    <div>
+        {open ? <Popup text={statusMsg} closePopup={() => setOpen(false)} /> : null}
+   </div>
+
         <div>
             <h1>Hey, get in touch!</h1>
             <p>Thanks for visiting my website! If you would like to get in touch about work, referrals or get my complete resume, <br /> 
@@ -85,20 +110,19 @@ function Contact() {
                             placeholder='Type your message here' 
                             maxLength={100}
                             onChange={(e) => setInquiry(e.target.value)} 
-                            required={inquiryRequired}
+                            required={true}
                             ></textarea>
                         </span>
                     </div>
                     <div className='fcontact-row-1'>
                         <span>
-                            <a className='button' href="google.com" onClick={{}}>Send!</a>
+                            <button className='button' onClick={(e) => sendData(e)}>Send!</button>
                         </span>
                     </div>
                 </div>
             </form>
         </div>
-    </div>
-    </Layout>   
+    </div> 
     );
 }
 

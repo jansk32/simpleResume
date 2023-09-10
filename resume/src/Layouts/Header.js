@@ -7,7 +7,6 @@ export default function Header() {
         <div></div>
         <div className="menu">
           <a className="menu-button" href='/portfolio'>Portfolio</a>
-          <a className="menu-button" href='/contact'>Get in Touch</a>
           <p></p>
         </div>
     </div>
