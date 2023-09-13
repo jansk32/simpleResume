@@ -1,12 +1,15 @@
 import React from 'react';
 import './style/Home.css';
 import Layout from '../Layouts/Layout.js'
+import test from "../assets/test/portfolio1.png"
+import fallBricks from "../assets/falling_bricks.png"
+import IconTriangle from '../assets/triangle.js';
 
 function Home() {
 return (
     <Layout>
-    <div className="center bg-black">
-        <div className="banner bg-right bg-no-repeat">
+    <div className="center bg-black pb-16">
+        <div className="banner bg-right bg-no-repeat bg-contain">
             <div className="banner-body">
                 <h2 className="welcome-title text-white">Hi, Let’s work together!</h2>
                 <div className="welcome-body text-white ">
@@ -17,20 +20,38 @@ return (
                 </div>
             </div>
         </div>
-        <div>
-            <p className='text-7xl text-white'>Projects...</p>
-            <div className="projects-section text-white">
-                <div className='projects-list'>
+        <div className='center'>
+            <div className='title flex flex-row justify-between justify-evenly'>
+            <p className='text-7xl text-white mt-16'>Projects...</p>
+            <img src={fallBricks}/>
+            </div>
+            <div className="text-white text-2xl flex flex-row justify-items-center h-96">
+                <div className='projects-list flex-1 center'>
                     <ul>
-                        <li>> Crypto Listing</li>
-                        <li>> Get People Socializing</li>
-                        <li>> Mementos</li>
-                        <li>> Metropolitan Museum Web</li>
-                        <li>> Tipover Game Solver</li>
+                        <li className="flex flex-row my-4" onMouseOver={() => console.log("Hello")}>
+                            <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
+                            <a href='https://github.com/jansk32/CryptoTaskPage'>Crypto Listing</a>
+                        </li>
+                        <li className="flex flex-row my-4" onMouseOver={() => console.log("Hello")}>
+                            <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
+                            <a href='https://github.com/StaticDDQ/Go-Blox-GPS'>Get People Socializing</a>
+                        </li>
+                        <li className="flex flex-row my-4" onMouseOver={() => console.log("Hello")}>
+                            <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
+                            <a href='https://github.com/jansk32/mementos'>Mementos</a>
+                        </li>
+                        <li className="flex flex-row my-4" onMouseOver={() => console.log("Hello")}>
+                            <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
+                            <a href='https://github.com/jansk32/MetropolitanView'>Metropolitan Museum Web Hightlight </a>
+                        </li>
+                        <li className="flex flex-row my-4" onMouseOver={() => console.log("Hello")}>
+                            <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
+                            <a href="https://github.com/jansk32/TipOverGame">Tipover Game Solver</a>
+                        </li>
                     </ul>
                 </div>
-                <div className='projects-display'>
-                    <img></img>
+                <div className='projects-display flex-1 bg-red-700 h-92 w-96'>
+                    {/* <img className="object-none" src={test} alt="portofolio"/> */}
                 </div>
             </div>
         </div>

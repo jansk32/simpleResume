@@ -13,5 +13,13 @@
 }
 
 .banner-body {
-    margin: 10em 60vw 10em 20vw;
+    margin: 10em 40vw 10em 0vw;
+}
+
+.prj-title {
+    background-color: black;
+}
+
+.projects-display {
+    
 }

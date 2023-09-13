@@ -1,6 +1,7 @@
 import Header from './Header'
 import Footer from './Footer'
-import './layout.css'
+import Contact from './Contact'
+import './style/layout.css'
 import React from 'react';
 
 export default function Layout({ children }) {
@@ -8,6 +9,7 @@ export default function Layout({ children }) {
     <>
       <Header/>
       <div>{children}</div>
+      <Contact />
       <Footer />
     </>
   )

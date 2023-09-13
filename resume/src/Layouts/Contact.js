@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Layout from '../Layouts/Layout.js'
 import Popup from '../Popup/popup.js';
 import axios from 'axios';
 import './style/Contact.css';
@@ -51,12 +50,12 @@ function Contact() {
 
 
     return (
-    <div className="center">
+    <div className="center text-center contact-comp bg-contain">
     <div>
         {open ? <Popup text={statusMsg} closePopup={() => setOpen(false)} /> : null}
    </div>
 
-        <div>
+        <div className='py-4'>
             <h1>Hey, get in touch!</h1>
             <p>Thanks for visiting my website! If you would like to get in touch about work, referrals or get my complete resume, <br /> 
             please fill in this contact sheet and I will get back to you ASAP!</p>
@@ -94,7 +93,7 @@ function Contact() {
                         </span>
                     </div>
                     <div className='fcontact-row-1'>
-                        <span className='fcontact-item'>
+                        <span className='fcontact-item text-black'>
                             <p>Subject of Inquiry</p>
                             <select onChange={(e) => onChangeSetSubject(e.target.value)} required>
                                 {options.map((item) => {
