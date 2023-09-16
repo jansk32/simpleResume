@@ -17,6 +17,7 @@ function Contact() {
         { value: null, label: 'Choose a subject' },
         { value: 1, label: 'Job Opportunity' },
         { value: 2, label: 'Collaboration Opportunity' },
+        { value: 3, label: 'Request for Resume' },
     ]
 
     function onChangeSetSubject(val){
@@ -50,28 +51,29 @@ function Contact() {
 
 
     return (
-    <div className="center text-center contact-comp bg-contain">
-    <div>
+    <div className="center text-center contact-comp bg-contain text-2xl">
         {open ? <Popup text={statusMsg} closePopup={() => setOpen(false)} /> : null}
-   </div>
 
-        <div className='py-4'>
-            <h1>Hey, get in touch!</h1>
-            <p>Thanks for visiting my website! If you would like to get in touch about work, referrals or get my complete resume, <br /> 
-            please fill in this contact sheet and I will get back to you ASAP!</p>
+        <div className='center py-4'>
+            <div className='text-left w-2/5'>
+                <h1 className='font-bold text-4xl mb-16'>Hey, get in touch!</h1>
+                <p >Thanks for visiting my website! If you would like to get in touch about work, referrals or get my complete resume, please fill in this contact sheet and I will get back to you within 1-2 business days.</p>
+            </div>
             <form>
-                <div>
+                <div className='center'>
                     <div className='fcontact-row-2'>
                         <span className='fcontact-item'>
                             <p>First Name</p>
-                            <input type="text" 
+                            <input type="text"
+                            className='text-black' 
                             placeholder='Type here'
                             onChange={(e) => setFirstName(e.target.value)} 
                             required></input>
                         </span>
                         <span className='fcontact-item'>
                             <p>Last Name</p>
-                            <input type="text" 
+                            <input type="text"
+                            className='text-black'  
                             placeholder='Type here'
                             onChange={(e) => {setLastName(e.target.value)}}></input>
                         </span>
@@ -80,6 +82,7 @@ function Contact() {
                         <span className='fcontact-item'>
                             <p>Company</p>
                             <input type="text" 
+                            className='text-black' 
                             placeholder='Type here' 
                             onChange={(e) => setCompany(e.target.value)} 
                             ></input>
@@ -87,15 +90,16 @@ function Contact() {
                         <span className='fcontact-item'>
                             <p>Email</p>
                             <input type="email" 
+                            className='text-black' 
                             placeholder='Type here' 
                             onChange={(e) => setEmail(e.target.value)} 
                             required></input>
                         </span>
                     </div>
                     <div className='fcontact-row-1'>
-                        <span className='fcontact-item text-black'>
+                        <span className='fcontact-item '>
                             <p>Subject of Inquiry</p>
-                            <select onChange={(e) => onChangeSetSubject(e.target.value)} required>
+                            <select className='fcontact-item-field text-black' onChange={(e) => onChangeSetSubject(e.target.value)} required>
                                 {options.map((item) => {
                                     return (<option value={item.value} key={item.value}>{item.label}</option>);
                                 })}
@@ -105,7 +109,8 @@ function Contact() {
                     <div className='fcontact-row-1'>
                         <span className='fcontact-item'>
                             <p>Message</p>
-                            <textarea 
+                            <textarea
+                            className='fcontact-item-field h-48 text-black' 
                             placeholder='Type your message here' 
                             maxLength={100}
                             onChange={(e) => setInquiry(e.target.value)} 
@@ -114,9 +119,7 @@ function Contact() {
                         </span>
                     </div>
                     <div className='fcontact-row-1'>
-                        <span>
-                            <button className='button' onClick={(e) => sendData(e)}>Send!</button>
-                        </span>
+                        <button className='button mx-20' onClick={(e) => sendData(e)}>Send!</button>
                     </div>
                 </div>
             </form>

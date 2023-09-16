@@ -16,23 +16,30 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 50%;
     margin: 1vh 10vw;
+    width: 75rem;
 }
 
 .fcontact-row-1 {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    margin: 1vh 10vw;
+    width: 75rem;
+    margin: 1vh 0vw;
+}
+
+.fcontact-item-field{
+    width: 80%;
 }
 
 .fcontact-item {
-    
+    width: 100rem;
 }
+
+
 
 .button {
     background-color: aqua;
     color:black;
     text-decoration-style: none;
+    width: 75rem;
 }

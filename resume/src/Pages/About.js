@@ -33,7 +33,7 @@ function About() {
                                     <li>Mandarin (basic)</li>
                                     <li>HTML/CSS/Jquery</li>
                                     <li>Javascript (React, Vue3, Node.js)</li>
-                                    <li>PHP</li>
+                                    <li>PHP (Laravel, Yii2)</li>
                                     <li>MySQL</li>
                                     <li>Adobe Photoshop</li>
                                     <li>Adobe Lightroom</li>
