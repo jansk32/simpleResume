@@ -1,0 +1,31 @@
+.aboutMe, .company {
+    background-color: black;
+    color: white;
+}
+
+.aboutMe {
+    background-image: url("../../assets/bricks3.png");
+    background-size:30%;
+}
+
+.wipro {
+    height: 50%;
+}
+
+.telmy {
+    height: 70%;
+}
+
+.companyListing {
+    background-image: url('../../assets/falling_bricks.png');
+    background-position: center;
+    background-size: contain;
+}
+
+.profileC {
+    height:70vh;
+}
+
+.profile {
+    max-height: 100%;
+}

@@ -30,23 +30,23 @@ return (
                     <ul>
                         <li className="flex flex-row my-4" onMouseOver={() => console.log("Hello")}>
                             <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
-                            <a href='https://github.com/jansk32/CryptoTaskPage'>Crypto Listing</a>
+                            <a href='https://github.com/jansk32/CryptoTaskPage' target="_blank">Crypto Listing</a>
                         </li>
                         <li className="flex flex-row my-4" onMouseOver={() => console.log("Hello")}>
                             <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
-                            <a href='https://github.com/StaticDDQ/Go-Blox-GPS'>Get People Socializing</a>
+                            <a href='https://github.com/StaticDDQ/Go-Blox-GPS' target="_blank">Get People Socializing</a>
                         </li>
                         <li className="flex flex-row my-4" onMouseOver={() => console.log("Hello")}>
                             <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
-                            <a href='https://github.com/jansk32/mementos'>Mementos</a>
+                            <a href='https://github.com/jansk32/mementos' target="_blank">Mementos</a>
                         </li>
                         <li className="flex flex-row my-4" onMouseOver={() => console.log("Hello")}>
                             <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
-                            <a href='https://github.com/jansk32/MetropolitanView'>Metropolitan Museum Web Hightlight </a>
+                            <a href='https://github.com/jansk32/MetropolitanView' target="_blank">Metropolitan Museum Web Hightlight </a>
                         </li>
                         <li className="flex flex-row my-4" onMouseOver={() => console.log("Hello")}>
                             <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
-                            <a href="https://github.com/jansk32/TipOverGame">Tipover Game Solver</a>
+                            <a href="https://github.com/jansk32/TipOverGame" target="_blank">Tipover Game Solver</a>
                         </li>
                     </ul>
                 </div>
