@@ -4,15 +4,15 @@
 
 .code-slides {
     width: 70vw;
-    /* padding-left: 23vw; */
     margin-top: 5vh;
 }
 
-.portfolio-banner {
-    background-image: url('../../assets/bricks4.png');
-    background-size: 40% !important;
-    height:50rem;
-    background-color: black;
+.photography-banner {
+    background-image: url('../../assets/camera_lego.png');
+    background-size: 50%;
+    height:40rem;
+    padding-bottom: 60rem;
+    
 }
 
 .slider-item-text:hover {

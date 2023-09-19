@@ -63,21 +63,6 @@ function Portfolio(){
                         </Carousel>
                     </div>
                 </div>
-                {/* <div className="photo-section">
-                    <h1>Photography</h1>
-                    <div className="ig-link">
-                        <a className="ig-link-text" href="https://www.instagram.com/jansenkwong/">@jansenkwong</a>
-                    </div>
-                    <div className="code-slides">
-                        <Carousel showArrows={true} centerMode={true} infiniteLoop={true}>
-                                  {slideImages.map((item, index) => (
-                                    <div className='slider my-slider' key={index}>
-                                      <img src={item.url} alt="photo of something"/>
-                              </div>
-                                  ))}
-                        </Carousel>
-                    </div> */}
-                {/* </div> */}
             </div>
         </Layout>
     )
