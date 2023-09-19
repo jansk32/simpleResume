@@ -118,8 +118,8 @@ function Contact() {
                             ></textarea>
                         </span>
                     </div>
-                    <div className='fcontact-row-1'>
-                        <button className='button mx-20' onClick={(e) => sendData(e)}>Send!</button>
+                    <div className='w-9/12 ml-40 flex flex-row'>
+                        <button className='button mx-20 h-12' onClick={(e) => sendData(e)}>Send!</button>
                     </div>
                 </div>
             </form>

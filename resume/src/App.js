@@ -1,6 +1,6 @@
 import Home from './Pages/Home.js';
-import Portfolio from './Pages/Portfolio.js'
 import About from './Pages/About.js'
+import Projects from './Pages/Projects.js'
 import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Routes>
           <Route index element={<Home />} />
-          <Route path="portfolio" element={<Portfolio />} />
+          <Route path="projects" element={<Projects />} />
           <Route path='about' element={<About />} />
           {/* <Route path="*" element={<NoPage />} /> */}
       </Routes>

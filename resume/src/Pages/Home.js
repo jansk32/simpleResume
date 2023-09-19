@@ -16,7 +16,7 @@ return (
                 <p className='text-9xl'>BUILD</p>
                 <p className='text-9xl'>DEVELOP</p>
                 <p className='text-9xl'>INNOVATE</p>
-                <p>To view this project code, please click <a href="google.com">here</a>!</p>
+                <p>To view this project code, please click <a href="https://github.com/jansk32/simpleResume">here</a>!</p>
                 </div>
             </div>
         </div>

@@ -41,5 +41,7 @@
     background-color: aqua;
     color:black;
     text-decoration-style: none;
-    width: 75rem;
+    width: 50rem;
+    border-radius: 20px;
+    margin-top: 2rem;
 }

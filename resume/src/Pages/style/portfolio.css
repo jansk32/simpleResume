@@ -1,6 +1,21 @@
 .code-slides {
-    width: 55vw;
-    padding-left: 23vw;
+    width: 70vw;
+    /* padding-left: 23vw; */
     margin-top: 5vh;
 }
 
+.portfolio-banner {
+    background-image: url('../../assets/bricks4.png');
+    height:40rem;
+
+}
+
+.slider-item-text:hover {
+    animation: example;
+    animation-duration: 1s;
+}
+
+@keyframes example {
+    from {height: 8rem;}
+    to {height: 9rem;}
+  }
