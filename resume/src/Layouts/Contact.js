@@ -18,6 +18,7 @@ function Contact() {
         { value: 1, label: 'Job Opportunity' },
         { value: 2, label: 'Collaboration Opportunity' },
         { value: 3, label: 'Request for Resume' },
+        { value: 4, label: 'Feedback' },
     ]
 
     function onChangeSetSubject(val){

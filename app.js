@@ -35,7 +35,7 @@ function validator(body){
     // check email and type is in range
 
     if (emailValidator.validate(body.email) &&
-    body.type >= 0 && body.type < 3 &&
+    body.type >= 0 && body.type < 5 &&
     body.company.length > 0 &&
     body.firstName.length > 0 && body.company.length <= 20
     ){
