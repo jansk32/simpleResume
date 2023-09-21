@@ -13,13 +13,21 @@
 }
 
 .banner-body {
-    margin: 10em 40vw 10em 0vw;
+    margin: 10em 40vw 5em 0vw;
 }
 
 .prj-title {
     background-color: black;
 }
 
-.projects-display {
-    
+.projects {
+    height: 60vh;
+    width: 80vw;
+}
+
+.title-photography {
+    background-image: url('../../assets/falling_bricks.png');
+    background-color: black;
+    background-size: contain;
+    background-repeat: no-repeat;
 }

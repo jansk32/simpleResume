@@ -1,16 +1,13 @@
 import React from 'react';
+import Logo from '../assets/logos/23.png'
 
 export default function Footer() {
     return (
-      <div style={{
-        'backgroundColor' : 'black',
-        'color' : 'white',
-        'padding-top': '3vh',
-        'padding-left': '40vw',
-        'bottom': '0px',
-        'width': '100%',
-        'height': '15vh'}}>
-          <p>© 2023 Jansen, All Rights Reserved</p>
+      <div 
+      className='bg-black text-white w-full flex flex-row justify-between'>
+          <div></div>
+          <p className='mt-8 ml-44'>© 2023 Jansen, All Rights Reserved</p>
+          <img className="h-40 mr-16" src={Logo} />
       </div>
     )
   }

@@ -8,20 +8,11 @@
     justify-content:space-between;
 }
 
-.logo {
-    background-color: red;
-}
-
 .menu {
     display: flex;
     flex-direction: row;
-    background-color: bisque;
     justify-content: space-between;
     width: 40em;
-}
-
-.menu-button {
-    padding: 0 3em;
 }
 
 .am-list-item {

@@ -51,7 +51,7 @@ function Contact() {
 
 
     return (
-    <div className="center text-center contact-comp bg-contain text-2xl">
+    <div className="text-center contact-comp text-2xl">
         {open ? <Popup text={statusMsg} closePopup={() => setOpen(false)} /> : null}
 
         <div className='center py-4'>
@@ -118,8 +118,8 @@ function Contact() {
                             ></textarea>
                         </span>
                     </div>
-                    <div className='w-9/12 ml-40 flex flex-row'>
-                        <button className='button mx-20 h-12' onClick={(e) => sendData(e)}>Send!</button>
+                    <div className='w-9/12 '>
+                        <button className='button mx-12 h-12' onClick={(e) => sendData(e)}>Send!</button>
                     </div>
                 </div>
             </form>

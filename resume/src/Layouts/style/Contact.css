@@ -10,6 +10,7 @@
     color: white;
     background-color: black;
     background-image: url('../../assets/falling_bricks.png');
+    background-size: 50%;
 }
 
 .fcontact-row-2 {
@@ -35,13 +36,11 @@
     width: 100rem;
 }
 
-
-
 .button {
     background-color: aqua;
     color:black;
     text-decoration-style: none;
-    width: 50rem;
+    width: 60rem;
     border-radius: 20px;
     margin-top: 2rem;
 }
