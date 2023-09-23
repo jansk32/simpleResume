@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 function SliderItem(props){
     const [showTxt, setShowTxt] = useState(false);
     return (
-        <div className="flex flex-col relative">
+        <div className="flex flex-col relative slider-items">
             <a href={props.url} rel="noreferrer" target='_blank'>
-                <img src={props.imgUrl} alt="photo of something"/>
-                {props.caption && <div className="slider-item-text 
-                absolute bg-white text-black opacity-70 bottom-9 w-full 
+                <img className="object-cover mt-24" src={props.imgUrl} alt="photo of something"/>
+                {props.caption && <div className="slider-item-text
+                absolute bg-white text-black opacity-70 bottom-0 w-full
                 hover:opacity-90 hover:overflow-y-auto"
                 onMouseEnter={() => setShowTxt(true)}
                 onMouseLeave={() => setShowTxt(false)}

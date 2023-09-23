@@ -24,3 +24,8 @@
     from {height: 8rem;}
     to {height: 9rem;}
   }
+
+  .slider-items {
+      align-items: center;
+      height: 40rem
+  }
