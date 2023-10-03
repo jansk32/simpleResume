@@ -9,8 +9,6 @@ require('dotenv').config({path: './.env'});
 const app = express();
 app.use(bodyParser.json())
 
-const port = process.env.port || 3000;
-
 async function storeDetails(body, messageId) {
         // store details in db
         await transactionModel.create({
@@ -31,10 +29,15 @@ async function storeDetails(body, messageId) {
         return true;
 }
 
-function validator(body){
+async function validator(body){
     // check email and type is in range
-
-    if (emailValidator.validate(body.email) &&
+    let emailValid = await emailValidator.validate({
+      email: body.email,
+      validateMx: false,
+      validateSMTP : true
+    });
+   
+    if (emailValid.valid &&
     body.type >= 0 && body.type < 5 &&
     body.company.length > 0 &&
     body.firstName.length > 0 && body.company.length <= 20
@@ -48,7 +51,9 @@ function validator(body){
 
 app.post('/email/inquiry', async (req, res, next) => {
     // create validator function
-    if(validator(req.body)){
+    let isValid = await validator(req.body);
+
+    if(isValid){
       var params = {
         Destination: { 
           ToAddresses: [
@@ -71,22 +76,32 @@ app.post('/email/inquiry', async (req, res, next) => {
       };
       
       // Create the promise and SES service object
+      if (process.env.ENV != "development"){
       new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise()
       .then(
         function(data) {
           // store details with message ID here
           storeDetails(req.body, data.MessageId)
-          res.send("success!")
+          res.sendStatus(200)
         }).catch(
           function(err) {
           // should I take note of errors?
           console.error(err, err.stack);
-          res.send("error");
-        });    
+          res.sendStatus(400);
+        });
+      }else{
+        try{
+          storeDetails(req.body, 123);
+          res.sendStatus(200);
+        }catch(exception){
+          res.status(400)
+          res.send(exception);
+        }
+      }    
 
     }else{
-      res,send("error")
+      res.sendStatus(400)
     }
-})
+});
 
-app.listen(port);
+module.exports = app;
