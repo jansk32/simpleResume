@@ -5,6 +5,7 @@
 .code-slides {
     width: 70vw;
     margin-top: 5vh;
+    height: 40rem;
 }
 
 .photography-banner {
@@ -15,6 +16,10 @@
     
 }
 
+.slider {
+    height: 40rem;
+}
+
 .slider-item-text:hover {
     animation: example;
     animation-duration: 1s;
@@ -23,4 +28,8 @@
 @keyframes example {
     from {height: 8rem;}
     to {height: 9rem;}
+  }
+
+  .img-slider {
+    height: 50rem;
   }
