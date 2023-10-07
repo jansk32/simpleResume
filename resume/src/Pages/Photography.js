@@ -40,7 +40,7 @@ function Photography(){
         <Layout>
             <div className="bg-black text-white">
                 <div className="photography-banner bg-contain bg-no-repeat bg-center center py-16">
-                    <p className="text-2xl mt-32 px-32">Your memories are priceless |</p>
+                    <p className="text-2xl mt-32 px-8">Your memories are priceless |</p>
                     <p className="text-9xl">PHOTOGRAPHY.</p>
                 </div>
                 <div className="code-section center pb-32">
