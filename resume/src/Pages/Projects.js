@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Layout from "../Layouts/Layout.js";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -13,6 +13,10 @@ import gps from "../assets/portfolio/gps.jpeg";
 import tipover from "../assets/portfolio/tipover.png";
 
 function Portfolio(){
+
+    useEffect(() => {
+        document.title = "Portfolio";
+    }, [])
 
     const slideImages = [
         {

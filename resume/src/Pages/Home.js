@@ -18,7 +18,7 @@ return (
     <Layout>
     <div className="center bg-black pb-16">
         <div className="banner bg-right bg-no-repeat">
-            <div className="banner-body">
+            <div className="banner-body px-20">
                 <p className="welcome-title text-white text-3xl">Hi, Let’s work together!</p>
                 <div className="welcome-body text-white ">
                 <p className='text-9xl'>BUILD</p>

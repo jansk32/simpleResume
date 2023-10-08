@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../Layouts/Layout.js";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
@@ -14,6 +14,10 @@ import photo4 from "../assets/photos/IMG_9950.jpg";
 
 
 function Photography(){
+
+    useEffect(() => {
+        document.title = "Photography";
+    }, [])
 
     const slideImages = [
         {

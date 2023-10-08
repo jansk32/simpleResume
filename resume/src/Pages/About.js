@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import Layout from '../Layouts/Layout';
 import './style/About.css'
 import wipro from '../assets/logos/wipro.png';
@@ -6,6 +6,10 @@ import telmy from '../assets/logos/telmy.png';
 import profile from '../assets/profile.jpeg';
 
 function About() {
+
+    useEffect(() => {
+        document.title = "About me";
+    }, [])
 
     return (
         <Layout>
