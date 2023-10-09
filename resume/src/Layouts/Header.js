@@ -6,7 +6,7 @@ export default function Header() {
     <div className="header bg-black text-white">
         <div className="logo">
           <a href='/'>
-            <img className='h-40 my-4 ml-8' src={Logo} />
+            <img className='h-40 my-4 ml-8' src={Logo} alt='logo' />
           </a>
         </div>
         <div></div>

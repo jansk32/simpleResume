@@ -7,7 +7,7 @@ export default function Footer() {
       className='bg-black text-white w-full flex flex-row justify-between'>
           <div></div>
           <p className='mt-8 ml-44'>© 2023 Jansen, All Rights Reserved</p>
-          <img className="h-40 mr-16" src={Logo} />
+          <img className="h-40 mr-16" src={Logo} alt='logo' />
       </div>
     )
   }

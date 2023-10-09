@@ -32,30 +32,30 @@ return (
         <div className='center'>
             <div className='title flex flex-row justify-between justify-evenly'>
             <p className='text-8xl text-white mt-16'>Projects..|</p>
-            <img src={fallBricks}/>
+            <img src={fallBricks} alt="falling bricks"/>
             </div>
             <div className="projects text-white text-2xl flex flex-col lg:flex-row justify-items-center">
                 <div className=' flex-1 center'>
                     <ul>
                         <li className="flex flex-row my-4" onMouseOver={() => setPhoto(crypto)}>
                             <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
-                            <a href='https://github.com/jansk32/CryptoTaskPage' target="_blank">Crypto Listing</a>
+                            <a href='https://github.com/jansk32/CryptoTaskPage' target="_blank" rel="noreferrer">Crypto Listing</a>
                         </li>
                         <li className="flex flex-row my-4" onMouseOver={() => setPhoto(gps)}>
                             <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
-                            <a href='https://github.com/StaticDDQ/Go-Blox-GPS' target="_blank">Get People Socializing</a>
+                            <a href='https://github.com/StaticDDQ/Go-Blox-GPS' target="_blank" rel="noreferrer">Get People Socializing</a>
                         </li>
                         <li className="flex flex-row my-4" onMouseOver={() => setPhoto(mementos)}>
                             <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
-                            <a href='https://github.com/jansk32/mementos' target="_blank">Mementos</a>
+                            <a href='https://github.com/jansk32/mementos' target="_blank" rel="noreferrer">Mementos</a>
                         </li>
                         <li className="flex flex-row my-4" onMouseOver={() => setPhoto(metro)}>
                             <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
-                            <a href='https://github.com/jansk32/MetropolitanView' target="_blank">Metropolitan Museum Web Hightlight </a>
+                            <a href='https://github.com/jansk32/MetropolitanView' target="_blank" rel="noreferrer">Metropolitan Museum Web Hightlight </a>
                         </li>
                         <li className="flex flex-row my-4" onMouseOver={() => setPhoto(tipover)}>
                             <IconTriangle className="mr-2 rotate-90 mt-0.5"/>
-                            <a href="https://github.com/jansk32/TipOverGame" target="_blank">Tipover Game Solver</a>
+                            <a href="https://github.com/jansk32/TipOverGame" target="_blank" rel="noreferrer">Tipover Game Solver</a>
                         </li>
                     </ul>
                 </div>

@@ -22,7 +22,7 @@ function About() {
                 </div>
                 <div className='bg-black text-white flex flex-row pt-8'>
                         <div className='profileC flex-1 flex flex-row-reverse mr-16 '>
-                            <img className='profile' src={profile} alt='profile picture'/>
+                            <img className='profile' src={profile} alt='profile'/>
                         </div>
                         <div className="flex-1">
                             <div className="w-96 text-2xl">
