@@ -56,7 +56,7 @@ function Contact() {
         {open ? <Popup text={statusMsg} closePopup={() => setOpen(false)} /> : null}
 
         <div className='center py-4'>
-            <div className='text-left w-3/6 py-8'>
+            <div className='text-left w-4/6 py-8'>
                 <h1 className='font-bold text-4xl mb-16'>Hey, get in touch!</h1>
                 <p >Thanks for visiting my website! If you would like to get in touch about work, referrals or get my complete resume, please fill in this contact sheet and I will get back to you within 1-2 business days.</p>
             </div>
