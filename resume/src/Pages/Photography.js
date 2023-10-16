@@ -50,6 +50,7 @@ function Photography(){
                 <div className="code-section center pb-32">
                     <div className="code-github">
                         <p className="text-xl">Other photos are available on my <a className="underline underline-offset-3" href="https://www.instagram.com/jansenkwong">Instagram</a></p>
+                        <p className="text-xl">Or check out my <a className="underline underline-offset-3" href="https://jayce12.picfair.com">Picfair</a> store!</p>
                     </div>
                     <div className="code-slides">
                         <Carousel showArrows={true} centerMode={false} infiniteLoop={true}>
