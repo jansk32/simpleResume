@@ -35,6 +35,10 @@ function Contact() {
             company: company,
             type: subject,
             body: inquiry,
+        }, {
+            headers: {
+                "Content-Type" : "application/json"
+            }
         })
         .then((resp) => {
             console.log("success")

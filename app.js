@@ -1,19 +1,17 @@
 const express = require('express');
 const AWS = require('./.aws/awsCredentials.js');
 const bodyParser = require('body-parser')
+const cors = require('cors')
+
 const transactionModel = require('./database/TransactionModel.js');
 const inquiryTemplate = require('./inquiryTemplate.js')
 const emailValidator = require('deep-email-validator')
 require('dotenv').config({path: './.env'});
 
+
 const app = express();
-app.use(bodyParser.json())
-app.use(function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "http://jankwong.net");
-  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-  next();
-})
-app.use(express.static(path.join(__dirname, '../client/build')))
+app.use(bodyParser.json());
+app.use(cors());
 
 async function storeDetails(body, messageId) {
         // store details in db
@@ -55,7 +53,7 @@ async function validator(body){
 
 }
 
-app.post('/email/inquiry', async (req, res, next) => {
+app.post('/api/email/inquiry', async (req, res, next) => {
     // create validator function
     let isValid = await validator(req.body);
 
