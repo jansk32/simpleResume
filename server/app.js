@@ -53,6 +53,10 @@ async function validator(body){
 
 }
 
+app.get('/api', async (req, res, next) => {
+  res.sendStatus(200);
+})
+
 app.post('/api/email/inquiry', async (req, res, next) => {
     // create validator function
     let isValid = await validator(req.body);
