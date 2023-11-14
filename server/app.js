@@ -40,16 +40,49 @@ async function validator(body){
       validateMx: false,
       validateSMTP : true
     });
-   
-    if (emailValid.valid &&
-    body.type >= 0 && body.type < 5 &&
-    body.company.length > 0 &&
-    body.firstName.length > 0 && body.company.length <= 20
-    ){
-      return true;
-    }else{
-      return false;
+
+    let errors = [];
+
+    // if email is not valid
+    if (!(emailValid.valid)) {
+      errors.push('Email');
     }
+    
+    // if firstname is not empty
+    if(body.firstName.length <= 0){
+      errors.push("First Name");
+    }
+
+    // if type if not valid
+    if(body.type < 0 || body.type > 5){
+      errors.push("Type");
+    }
+    
+    // if company name is not empty
+    if(body.company.length <= 0){
+      errors.push("Company")
+    }
+   
+    if(errors.length > 0){
+      return {
+        'isValid' : false,
+        'errors' : errors,
+    };
+    } else {
+      return {
+        'isValid' : true,
+        'errors' : [],
+      };
+    }
+    // if (emailValid.valid &&
+    // body.type >= 0 && body.type < 5 &&
+    // body.company.length > 0 &&
+    // body.firstName.length > 0 && body.company.length <= 20
+    // ){
+    //   return true;
+    // }else{
+    //   return false;
+    // }
 
 }
 
@@ -59,9 +92,9 @@ app.get('/api', async (req, res, next) => {
 
 app.post('/api/email/inquiry', async (req, res, next) => {
     // create validator function
-    let isValid = await validator(req.body);
+    let validating = await validator(req.body);
 
-    if(isValid){
+    if(validating.isValid){
       var params = {
         Destination: { 
           ToAddresses: [
@@ -108,7 +141,10 @@ app.post('/api/email/inquiry', async (req, res, next) => {
       }    
 
     }else{
-      res.sendStatus(400)
+      res.status(400)
+      res.send({
+        errors: validating.errors
+      });
     }
 });
 

@@ -41,15 +41,19 @@ function Contact() {
             }
         })
         .then((resp) => {
-            console.log("success")
             setOpen(true);
             setStatusMsg("Your inquiry was successfully sent!")
 
         })
         .catch((err) => {
-            console.log("error " + err);
             setOpen(true);
-            setStatusMsg("Oops! Seems like an error :( Please send a direct email to jankwo32@gmail.com instead")
+            if(err.response.data.errors.length > 0){
+                setStatusMsg("Seems like these fields are not accepted:" + err.response.data.errors.map((i) => {
+                    return " " + i;
+                }))
+            }else{
+                setStatusMsg("Oops! Seems like an error :( Please send a direct email to jankwo32@gmail.com instead")    
+            }
 
         })
     }
